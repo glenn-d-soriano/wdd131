@@ -5,10 +5,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Canada</title>
-    <meta name="description" 
-        content="WDD 131 Dynamic Web Fundamentals by [Glenn Soriano], learning web development.">
-    <meta name="author" content="[Glenn Soriano]">
+    <title>WDD 131 Dynamic Web Fundamentals [Glenn Soriano]</title>
+    <meta name="description"
+        content="Learn about Canada - its geography, weather, culture, and landmarks, as part of the WDD 131 Dynamic Web Fundamentals project by Glenn Soriano.">
+    <meta name="author" content="Glenn Soriano">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
     <link rel="stylesheet" href="styles/place.css">
     <script src="scripts/place.js" defer></script>
 </head>
@@ -16,31 +17,36 @@
 <body>
     <!-- Header / Title -->
     <header>
-        <h1>🇨🇦Canada🇨🇦</h1>
+        <h1>🇨🇦 Canada - Discover the Beauty of the North 🇨🇦</h1>
     </header>
 
-    <!-- Hero Image -->
-    <section class="hero">
-        <picture>
-            <source srcset="images/canada-large1.webp" media="(min-width: 768px)">
-            <img src="images/canada-small1.webp" alt="Beautiful Landscape of Canada">
-        </picture>
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Image Section -->
+        <section class="hero">
+            <picture>
+                <source srcset="images/canada-large1.webp" media="(min-width: 768px)">
+                <img src="images/canada-small1.webp" alt="Beautiful Landscape of Canada">
+            </picture>
 
-        <!-- Data Section -->
-        <section class="data animated-slide">
-            <h2>Data</h2>
-            <ul>
-                <li><strong>Capital:</strong> Ottawa</li>
-                <li><strong>Population:</strong> 38 million</li>
-                <li><strong>Official Languages:</strong> English, French</li>
-                <li><strong>Currency:</strong> Canadian Dollar (CAD)</li>
-                <li><strong>Continent:</strong> North America</li>
-                <li><strong>Famous Landmark:</strong> Niagara Falls</li>
-            </ul>
+            <!-- Data Section (Overlayed for Wider View) -->
+            <div class="overlay-container">
+                <section class="data">
+                    <h2>Data</h2>
+                    <ul>
+                        <li><strong>Capital:</strong> Ottawa</li>
+                        <li><strong>Population:</strong> 38 million</li>
+                        <li><strong>Official Languages:</strong> English, French</li>
+                        <li><strong>Currency:</strong> Canadian Dollar (CAD)</li>
+                        <li><strong>Continent:</strong> North America</li>
+                        <li><strong>Famous Landmark:</strong> Niagara Falls</li>
+                    </ul>
+                </section>
+            </div>
         </section>
 
         <!-- Weather Section -->
-        <section class="weather animated-slide">
+        <section class="weather">
             <h2>Weather ⛅</h2>
             <div class="weather-icon">
                 <img src="images/weather-icon.svg" alt="Partly Cloudy">
@@ -49,13 +55,14 @@
                 <li><strong>Temperature:</strong> 10°C</li>
                 <li><strong>Conditions:</strong> Partly Cloudy</li>
                 <li><strong>Wind:</strong> 5 km/h</li>
-                <li><strong id="windChill">Wind Chill:</strong> 9.8°C</li>
+                <li><strong>Wind Chill:</strong> <span id="windChill">9.8°C</span></li>
             </ul>
         </section>
-    </section>
+    </main>
 
+    <!-- Footer -->
     <footer>
-        <p>© <span id="currentyear"></span> 🇨🇦Glenn Soriano🇨🇦 Winnipeg, Canada</p>
+        <p>© <span id="currentyear"></span> 🇨🇦 Glenn Soriano 🇨🇦 Winnipeg, Canada</p>
         <p id="lastModified"></p>
     </footer>
 </body>
