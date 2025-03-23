@@ -1,0 +1,60 @@
+body {
+    font-family: Roboto, helvetica, sans-serif;
+}
+
+header,
+main,
+footer {
+    max-width: 760px;
+    margin: 0 auto;
+}
+
+.banner {
+    background-color: #eee;
+    padding: 1rem;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+h1 {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* Create two equal columns */
+    gap: 2rem;
+    /* Adds spacing between columns */
+}
+
+h2 {
+    grid-column: span 2;
+    /* Makes the <h2> span both columns */
+    text-align: left;
+    /* Left-align the <h2> */
+}
+
+article p {
+    text-align: justify;
+}
+
+.callout {
+    color: #fff;
+        /* White text for better contrast */
+    background-color: #702963;
+        /* Keep the background color */
+    padding: 1rem;
+        /* Adds padding all around */
+    border-radius: 8px;
+}
+
+footer {
+    margin-top: 1rem;
+    padding: 0.5rem 0;
+    /* Add padding for better spacing */
+    text-align: left;
+    /* Align footer content to the left */
+    font-size: smaller;
+}
