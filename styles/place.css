@@ -58,7 +58,7 @@ header {
     }
 
     .weather {
-        top: 400px;
+        top: 20px;
         right: 20px;
     }
 }
@@ -94,7 +94,7 @@ header {
     }
 
     .weather {
-        top: 800px;
+        top: 400px;
         right: 20px;
     }
 
