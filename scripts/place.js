@@ -9,7 +9,7 @@ function calculateWindChill(temperature, windSpeed) {
 }
 
 // Set static data
-const temperature = 12; // Static temperature in Celsius
+const temperature = 12; // Static temperature in Celsius    
 const windSpeed = 20;   // Static wind speed in km/h
 
 // Display Wind Chill
