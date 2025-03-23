@@ -16,7 +16,6 @@ const windSpeed = 20;   // Static wind speed in km/h
 const windChill = calculateWindChill(temperature, windSpeed);
 document.getElementById('windChill').innerText = `Windchill: ${windChill}`;
 
-// Update Footer
-const year = new Date().getFullYear();
-document.getElementById('year').innerText = year;
-document.getElementById('lastModified').innerText = document.lastModified;
+
+document.getElementById('currentyear').textContent = new Date().getFullYear();
+document.getElementById('lastModified').textContent = `Last modified: ${document.lastModified}`;
