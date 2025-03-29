@@ -1,0 +1,92 @@
+@media (min-width: 768px) {
+    body {
+        margin: 0;
+        max-width: 1200px;
+        /* Max width for content to keep it neat */
+        margin: 0 auto;
+
+    }
+
+    header {
+        text-align: left;
+        padding: 20px 50px;
+
+    }
+
+    /* Remove hamburger icon on larger screens */
+    .hamburger {
+        display: none;
+    }
+
+    /* Navigation menu (horizontal layout on large screens) */
+    #nav-menu {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        margin-top: 0;
+    }
+
+    #nav-menu li {
+        margin: 0;
+
+    }
+
+    #nav-menu a {
+        text-decoration: none;
+        color: white;
+        font-size: 20px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    #nav-menu a:hover {
+        color: #ffcc00;
+        /* Hover effect for links */
+    }
+
+    /* Image grid adjustments for larger screens */
+    .temples-gallery {
+        grid-template-columns: repeat(3, 1fr);
+        /* 3 columns on large screens */
+        gap: 20px;
+        /* Increase gap between images */
+    }
+
+    figure {
+        margin: 0;
+        background-color: #fff;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+    }
+
+    figure img {
+        width: 100%;
+        height: auto;
+        display: block;
+        border-bottom: 5px solid #4CAF50;
+
+    }
+
+    figcaption {
+        padding: 10px;
+        background-color: #f9f9f9;
+        font-weight: bold;
+        color: #333;
+        font-size: 18px;
+    }
+
+    footer {
+        background-color: #333;
+        color: white;
+        text-align: center;
+        padding: 20px;
+        font-size: 16px;
+        margin-top: 30px;
+    }
+
+    footer p {
+        margin: 5px 0;
+    }
+}

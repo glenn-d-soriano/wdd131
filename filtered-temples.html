@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temple Album</title>
+    <meta name="description"
+        content="WDD 131 Picture Album Project by [Glenn Soriano], This assignment applies the concepts presented in the learning activities to a picture album page that is responsive in small and larger views. This page will utilize a 'hamburger' menu and respond to user requests..">
+    <meta name="author" content="Glenn Soriano">
+    <link rel="stylesheet" href="styles/filtered-temples.css">
+    <link rel="stylesheet" href="styles/filtered-large-temples.css" media="(min-width: 768px)">
+    <script defer src="scripts/filtered-temples.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>Temple Album</h1>
+
+
+        <nav>
+            <button class="hamburger" id="hamburger">&#9776;</button>
+            <ul id="nav-menu">
+                <li><a href="#" id="home">Home</a></li>
+                <li><a href="#" id="old">Old</a></li>
+                <li><a href="#" id="new">New</a></li>
+                <li><a href="#" id="large">Large</a></li>
+                <li><a href="#" id="small">Small</a></li>
+            </ul>
+        </nav>
+
+    
+    </header>
+    
+    <main id="temple-cards-container">
+        <!-- Temple cards will be dynamically inserted here -->
+    </main>
+
+    <footer>
+        <p>&copy; <span id="current-year"></span> 🇨🇦Glenn Soriano🇨🇦 Winnipeg, Canada </p>
+        <p>Last Modified: <span id="last-modified"></span></p>
+    </footer>
+</body>
+
+</html>
