@@ -105,15 +105,15 @@ const createTempleCard = (temple) => {
     templeContainer.appendChild(templeCard);
 };
 
-// Function to display temples without clearing "HOME"
+
 const displayTemples = (templeList) => {
     const templeContainer = document.getElementById('temple-cards-container');
 
-    // First, clear all temple cards, but NOT the "HOME" heading
+    
     const existingCards = document.querySelectorAll('.temple-card');
     existingCards.forEach(card => card.remove());
 
-    // Now, append new temple cards
+    
     templeList.forEach(temple => createTempleCard(temple));
 };
 
@@ -136,7 +136,7 @@ document.getElementById('small').addEventListener('click', () => {
     displayTemples(smallTemples);
 });
 
-// Initially display all temples
+// Display all temples
 displayTemples(temples);
 
 // Update the footer with the current year and last modified date
