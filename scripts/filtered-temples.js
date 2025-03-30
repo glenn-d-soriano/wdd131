@@ -79,12 +79,12 @@ const temples = [
             "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/manila-philippines/400x250/manila-philippines-temple-lds-129585-wallpaper.jpg"
     },
     {
-        templeName: "Cebu City, Philippines",
-        location: "Cebu City, Cebu, Philippines",
-        dedicated: "2010, June, 13",
+        templeName: "San Diego, California",
+        location: "San Diego, California, United States",
+        dedicated: "1993, April, 25-30",
         area: 29556,
         imageUrl:
-            "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/cebu-city-philippines/400x640/cebu-philippines-temple-lds-852643-wallpaper.jpg"
+            "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/san-diego-california/400x250/san-diego-temple-765109-wallpaper.jpg"
     },
 ];
 
@@ -96,7 +96,7 @@ const createTempleCard = (temple) => {
     templeCard.classList.add('temple-card');
 
     templeCard.innerHTML = `
-    <h2>${temple.templeName}</h2>
+    <h3>${temple.templeName}</h3>
     <p>${temple.location}</p>
     <p><strong>Dedicated:</strong> ${temple.dedicated}</p>
     <p><strong>Area:</strong> ${temple.area} sq ft</p>
@@ -105,9 +105,15 @@ const createTempleCard = (temple) => {
     templeContainer.appendChild(templeCard);
 };
 
-// Loop through the array and create cards for all temples
+// Function to display temples without clearing "HOME"
 const displayTemples = (templeList) => {
-    templeContainer.innerHTML = ''; // Clear current content
+    const templeContainer = document.getElementById('temple-cards-container');
+
+    // First, clear all temple cards, but NOT the "HOME" heading
+    const existingCards = document.querySelectorAll('.temple-card');
+    existingCards.forEach(card => card.remove());
+
+    // Now, append new temple cards
     templeList.forEach(temple => createTempleCard(temple));
 };
 
