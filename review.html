@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="Product review form for submitting product feedback, including ratings, installation dates, and features.">
+    <title>Product Review</title>
+    <meta name="author" content="Glenn Soriano">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/form.css">
+</head>
+
+<body>
+    <header>
+        <h1>Thank you for your review!</h1>
+    </header>
+    <main>
+        <p>Your review has been submitted successfully.</p>
+        <p>You have submitted <span id="reviewCount">0</span> reviews.</p>
+
+        <!-- Back to form button -->
+        <button onclick="window.location.href='form.html';">Back to Form</button>
+    </main>
+    <footer>
+    
+        <p>&copy; <span id="current-year"></span> 🇨🇦Glenn Soriano🇨🇦 Winnipeg, Canada </p>
+        <p>Last Modified: <span id="last-modified"></span></p>
+    </footer>
+    <script>
+        let count = Number(localStorage.getItem("reviewCount")) || 0;
+        count++;
+        localStorage.setItem("reviewCount", count);
+        document.getElementById("reviewCount").textContent = count;
+    </script>
+</body>
+
+</html>

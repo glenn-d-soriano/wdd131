@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="Submit your product review through this easy-to-use form. Choose a product, rate it, and share your experience to help others make informed decisions.">
+    <title>Product Review</title>
+    <meta name="author" content="Glenn Soriano">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/form.css">
+</head>
+
+<body>
+    <header>
+        <h1>Product Review Form</h1>
+    </header>
+
+    <main>
+        <form method="get" action="review.html">
+            <!-- Product Name Dropdown -->
+            <label for="productName">Product Name:</label>
+            <select id="productName" name="productName" required>
+                <option value="" disabled selected>Choose a Product ...</option>
+                <!-- Options will be added by JS -->
+            </select>
+
+            <!-- Overall Rating (1-5) -->
+            <div>
+                <fieldset class="overall_rating">
+                    <legend>Overall Rating</legend>
+            
+                    <div class="rating">
+                        <label for="rating1">⭐</label>
+                        <input type="radio" name="rating" id="rating1" value="1" required>
+                    </div>
+            
+                    <div class="rating">
+                        <label for="rating2">⭐⭐</label>
+                        <input type="radio" name="rating" id="rating2" value="2">
+                    </div>
+            
+                    <div class="rating">
+                        <label for="rating3">⭐⭐⭐</label>
+                        <input type="radio" name="rating" id="rating3" value="3">
+                    </div>
+            
+                    <div class="rating">
+                        <label for="rating4">⭐⭐⭐⭐</label>
+                        <input type="radio" name="rating" id="rating4" value="4">
+                    </div>
+            
+                    <div class="rating">
+                        <label for="rating5">⭐⭐⭐⭐⭐</label>
+                        <input type="radio" name="rating" id="rating5" value="5">
+                    </div>
+                </fieldset>
+            </div>
+
+            <!-- Date Installed -->
+            <label for="installDate">Date of Installation:</label>
+            <input type="date" id="installDate" name="installDate" required>
+
+            <!-- Useful Features -->
+            <fieldset>
+                <legend>Which features did you find useful in the product?
+                    (Check all the apply)
+                </legend>
+                <label><input type="checkbox" id="feature1" name="features" value="durability"> Durability</label>
+                <label><input type="checkbox" id="feature2" name="features" value="east of use"> Ease of Use</label>
+                <label><input type="checkbox" id="feature3" name="features" value="design"> Design</label>
+                <label><input type="checkbox" id="feature4" name="features" value="performance"> Performance</label>
+            </fieldset>
+
+            <label for="review">Written Review <span class="optional">(Optional)</span></label>
+            <textarea id="review" name="review" rows="4" cols="50"></textarea>
+            
+            <!-- User Name -->
+            <label for="username">Your Name <span class="optional">(Optional)</span></label>
+            <input type="text" id="username" name="username">
+
+            <!-- Submit -->
+            <input type="submit" value="Post Review">
+            
+        </form>
+    </main>
+
+    <footer>
+        
+        <p>&copy; <span id="current-year"></span> 🇨🇦Glenn Soriano🇨🇦 Winnipeg, Canada </p>
+        <p>Last Modified: <span id="last-modified"></span></p>
+    </footer>
+
+    <script src="scripts/form.js"></script>
+</body>
+
+</html>
