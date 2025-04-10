@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Favorite BOM Chapters</title>
+    <link rel="stylesheet" href="styles/bom.css" />
+</head>
+
+<body>
+    <header>
+        <h1>Favorite Book of Mormon Chapters</h1>
+    </header>
+
+    <main>
+        <label for="favchap">Enter a favorite chapter:</label>
+        <input type="text" id="favchap" placeholder="e.g., Alma 5" />
+        <button>Add Chapter</button>
+
+        <ul id="list"></ul>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="year"></span> | Your Name</p>
+    </footer>
+
+    <script src="scripts/bom.js"></script>
+    <script>
+        // Set the current year in footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+
+</html>
