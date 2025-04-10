@@ -138,42 +138,45 @@ input[type="submit"]:hover {
 fieldset.overall_rating {
     display: flex;
     justify-content: space-between;
-    /* Distribute space between rating options */
     align-items: center;
-    /* Align items vertically centered */
     border: none;
-    /* Remove the default border of fieldset */
     padding: 0;
-    /* Remove default padding */
     margin-bottom: 20px;
-    /* Space between this section and others */
 }
 
 /* Style for individual rating items */
 fieldset.overall_rating .rating {
     display: flex;
     flex-direction: column;
-    /* Stack the stars and radio button vertically */
     align-items: center;
-    /* Center align the label and input */
     gap: 5px;
-    /* Space between the star and radio button */
 }
 
 /* Optional: Style for the label (stars) */
 fieldset.overall_rating label {
     font-size: 2rem;
-    /* Adjust star size */
     cursor: pointer;
-    /* Change cursor to pointer to indicate it's clickable */
 }
 
 /* Style for the radio buttons */
 fieldset.overall_rating input[type="radio"] {
     width: 20px;
-    /* Set a fixed size for the radio button */
     height: 20px;
-    /* Set a fixed size for the radio button */
     display: inline-block;
-    /* Make sure the radio button is inline */
+}
+
+/* Mobile view adjustments */
+@media (max-width: 600px) {
+
+    /* Increase gap between stars and radio buttons on mobile view */
+    fieldset.overall_rating .rating {
+        gap: 10px;
+        /* Increase the gap for mobile devices */
+    }
+
+    /* Optionally, you can reduce the star size to fit better on small screens */
+    fieldset.overall_rating label {
+        font-size: 1.5rem;
+        /* Reduce star size for mobile */
+    }
 }
