@@ -200,3 +200,26 @@ fieldset.overall_rating input[type="radio"] {
         width: auto;
     }
 }
+
+/* Mobile view */
+@media (max-width: 600px) {
+    .overall_rating {
+        flex-direction: column;
+        /* Stack the items vertically */
+        align-items: center;
+        /* Center the items */
+    }
+
+    .rating {
+        flex: 1 1 100%;
+        /* Make each rating take up the full width */
+    }
+}
+
+/* Tablet/Desktop view */
+@media (min-width: 601px) {
+    .overall_rating {
+        flex-direction: row;
+        /* Display items horizontally */
+    }
+}
