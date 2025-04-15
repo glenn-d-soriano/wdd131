@@ -2,68 +2,162 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WDD 131 Dynamic Web Fundamentals [Glenn Soriano]</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description"
-        content="WDD 131 Dynamic Web Fundamentals by [Glenn Soriano], learning web development.">
-    <meta name="author" content="[Glenn Soriano]">
-    
-    <link rel="stylesheet" href="styles/base.css">
+        content="Explore Philippines is your ultimate travel companion to the best vacation spots in the Philippines." />
+    <meta name="author" content="Glenn Soriano" />
+
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <script src="scripts/getdates.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="styles/destinations.css" />
+    <title>Explore Philippines</title>
 </head>
 
 <body>
     <header>
-        <h1>WDD 131 - Dynamic Web Fundamentals - Glenn Soriano</h1>
+        <h1>Explore Philippines</h1>
         <nav>
             <ul>
-                <li><a href="https://ca.linkedin.com/" target="_blank">LinkedIn</a></li>
-                <li><a href="https://byupw.instructure.com/" target="_blank">Canvas</a></li>
-                <li><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/ether/12?lang=eng" target="_blank">Scriptures</a></li>
-                <li><a href="#">Final Project </a></li>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="destinations.html">Destinations</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="references.html">References</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <section class="card1">
-            <div class="about-content">
-                <h2>About Me</h2>
-                <p>My name is Glenn Soriano. I am from the Philippines, but my family immigrated to Canada in 2010. I am married to my wife Yen and have two wonderful boys named Aiath (10) and Aizen (4). I live in Winnipeg, MB Canada. I was born in the church. I work full-time for BELL as a Senior Business Collection Specialist. I love playing table tennis with my son Aiath and love travelling with my family once a year. My family loves the Lord and we show it through serving other people. I am excited and looking forward to get a degree through the inspired BYU pathway connect program. I am currently taking web development to get my first certificate for Software    Development program.</p>
-                <img src="images/glennsoriano.jpg" alt="Glenn Soriano">
-            </div>
-
-            <div class="location-content">
-                <h3>Winnipeg, Canada</h3>
-                <img src="images/flagofcanada.png" alt="Canada Flag">    
-                <p>Winnipeg, the capital and largest city of Manitoba, Canada, is situated at the confluence of the Red and Assiniboine
-                rivers, near North America's longitudinal center. As of 2021, its population was approximately 749,607, with the
-                metropolitan area reaching 834,678 residents. Winnipeg is known for its cold winters with temperatures often dipping below -20°C (about -4°F) during January, making
-                it one of the coldest cities in Canada. It has earned nicknames like "The Coldest City" in Canada.</p>
+        <!-- Hero Section -->
+        <section class="hero">
+            <picture>
+                <source srcset="images/Philippines.jpeg" type="image/jpeg">
+                <img src="images/Philippines.jpeg" alt="Philippine beach landscape" loading="lazy" />
+            </picture>
+            <div class="hero-text">
+                <h2>Discover the Pearl of the Orient</h2>
+                <p>From crystal-clear waters to vibrant culture, let's explore the Philippines together!</p>
             </div>
         </section>
 
-        <section class="card2">
-            <h2>Web Dev Resources</h2>
+        <!-- Featured Destinations -->
+        <section class="featured">
+            <h2>Featured Destinations</h2>
+            <div class="destination-cards">
+                <article class="destination-card">
+                    <img src="images/palawan.jpeg" alt="Palawan" loading="lazy">
+                    <h3>Palawan</h3>
+                    <p>Known for its limestone cliffs and crystal-clear lagoons, Palawan is a paradise on Earth.</p>
+                </article>
+                <article class="destination-card">
+                    <img src="images/siargao.jpeg" alt="Siargao" loading="lazy">
+                    <h3>Siargao</h3>
+                    <p>The surfing capital of the Philippines, perfect for adventure and beach lovers alike.</p>
+                </article>
+                <article class="destination-card">
+                    <img src="images/banaue.jpeg" alt="Banaue Rice Terraces" loading="lazy">
+                    <h3>Banaue</h3>
+                    <p>Marvel at the stunning 2,000-year-old rice terraces carved into the mountains by ancient
+                        Filipinos.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Specialized Trips -->
+        <section class="special-trips">
+            <h2>Specialized Travel Packages</h2>
+            <div class="destination-cards">
+                <article class="destination-card">
+                    <img src="images/familytrip.jpeg" alt="Family Trip" loading="lazy">
+                    <h3>Family-Friendly Adventures</h3>
+                    <p>Discover family-friendly destinations from kid-safe beaches to theme parks and guided nature
+                        hikes.</p>
+                </article>
+                <article class="destination-card">
+                    <img src="images/grouptours.jpeg" alt="Group Tours" loading="lazy">
+                    <h3>Group Travel Deals</h3>
+                    <p>Perfect for barkadas or workmates! Enjoy discounted group rates with full itineraries and guides.
+                    </p>
+                </article>
+                <article class="destination-card">
+                    <img src="images/customtours.jpeg" alt="Custom Tour" loading="lazy">
+                    <h3>Customized Tours</h3>
+                    <p>Create your own travel adventure. We'll help design a custom itinerary for your perfect
+                        Philippine escape.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Why Choose Us -->
+        <section class="why-choose-us">
+            <h2>Why Choose Explore Philippines?</h2>
             <ul>
-                <li><a href="https://dev.to/" target="_blank">Dev.to Community</a></li>
-                <li><a href="https://developer.mozilla.org/en-US/">Developer Mozzila</a></li>
-                <li><a href="https://css-tricks.com/">CSS Tricks</a></li>
-                <li><a href="https://developer.mozilla.org/en-US/">W3 Schools</a></li>
-                <li><a href="https://www.freecodecamp.org/">Free Code Camp</a></li>
-                
+                <li><strong>Local Expertise:</strong> We know the islands inside out and only recommend authentic
+                    experiences.</li>
+                <li><strong>Handpicked Destinations:</strong> Each location is selected for its beauty, culture, and
+                    hospitality.</li>
+                <li><strong>Traveler Support:</strong> Responsive customer service, helpful travel guides, and planning
+                    tools.</li>
+                <li><strong>Sustainable Tourism:</strong> We promote responsible travel and eco-friendly destinations.
+                </li>
             </ul>
         </section>
-    
+
+        <!-- Newsletter -->
+        <section class="newsletter">
+            <h2>Join Our Travel Newsletter</h2>
+            <form action="#" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <button type="submit">Subscribe</button>
+            </form>
+        </section>
+
+        <!-- Call to Action -->
+        <section class="call-to-action">
+            <h2>Plan Your Next Vacation</h2>
+            <p>Discover hidden gems and stunning destinations across the Philippines.</p>
+            <a href="destinations.html" class="cta-button">Explore Destinations</a>
+        </section>
     </main>
 
     <footer>
-        <p>© <span id="currentyear"></span> 🇨🇦Glenn Soriano🇨🇦 Winnipeg,Canada</p>
-        <p id="lastModified"></p>
+        <p>&copy; <span id="current-year"></span> 🇵🇭 Glenn Soriano - Explore Philippines 🇵🇭</p>
+        <p>Last Modified: <span id="last-modified"></span></p>
+
+        <nav class="sociallinks">
+            <a href="https://facebook.com" title="Facebook">
+                <img src="images/fb.png" alt="Facebook Logo">
+            </a>
+            <a href="https://twitter.com" title="Twitter">
+                <img src="images/twitter.jpg" alt="Twitter Logo">
+            </a>
+            <a href="https://instagram.com" title="Instagram">
+                <img src="images/instagram.jpg" alt="Instagram Logo">
+            </a>
+        </nav>
+
+        <nav>
+            <ul>
+                <li><a href="privacy.html" aria-label="Privacy Policy">Privacy Policy</a></li>
+                <li><a href="terms.html" aria-label="Terms and Conditions">Terms & Conditions</a></li>
+            </ul>
+        </nav>
     </footer>
+
+    <script>
+        // Set dynamic year and last modified
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+        document.getElementById('last-modified').textContent = document.lastModified;
+    </script>
 </body>
 
-</html> 
+</html>

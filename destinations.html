@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="Explore Philippines is a website that highlights the best vacation spots in the Philippines, offering travel guides, cultural insights, and destination recommendations." />
+    <meta name="author" content="Glenn Soriano" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="styles/destinations.css" />
+    <title>Explore Philippines - Destinations</title>
+</head>
+
+<body>
+    <header>
+        <h1>Explore Philippines</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="destinations.html" class="active">Destinations</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="references.html">References</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section for Destinations Page -->
+        <section class="hero">
+            <picture>
+                <source srcset="images/Philippines.jpeg" type="image/jpeg">
+                <img src="images/Philippines.jpeg" alt="Philippine beach landscape" loading="lazy" />
+            </picture>
+            <div class="hero-text">
+                <h2>Explore the Best of the Philippines</h2>
+                <p>Find your perfect getaway among the Philippines' most beautiful and unique destinations.</p>
+            </div>
+        </section>
+
+        <!-- Detailed Destinations Sections -->
+        <section class="destination-details">
+            <h2>Our Featured Destinations</h2>
+
+            <!-- Palawan Section -->
+            <div class="destination-section">
+                <h3>Palawan</h3>
+                <img src="images/palawan.jpeg" alt="Palawan" loading="lazy">
+                <p>Known for its limestone cliffs, crystal-clear lagoons, and breathtaking beaches, Palawan is often
+                    referred to as the last frontier of the Philippines. It's perfect for diving, island hopping, and
+                    exploring nature.</p>
+                <h4>Best Time to Visit:</h4>
+                <p>The dry season from December to May is the best time to visit Palawan for sunny weather and calm
+                    seas.</p>
+                <a href="https://en.wikipedia.org/wiki/Palawan" target="_blank">Learn More About Palawan</a>
+            </div>
+
+            <!-- Siargao Section -->
+            <div class="destination-section">
+                <h3>Siargao</h3>
+                <img src="images/siargao.jpeg" alt="Siargao" loading="lazy">
+                <p>Siargao, known as the surfing capital of the Philippines, offers more than just great waves. It's a
+                    paradise for adventure seekers with its lush landscapes, crystal-clear waters, and laid-back
+                    atmosphere.</p>
+                <h4>Things to Do:</h4>
+                <ul>
+                    <li>Surfing at Cloud 9</li>
+                    <li>Island hopping to nearby islets</li>
+                    <li>Explore Sugba Lagoon</li>
+                </ul>
+                <a href="https://en.wikipedia.org/wiki/Siargao" target="_blank">Learn More About Siargao</a>
+            </div>
+
+            <!-- Banaue Section -->
+            <div class="destination-section">
+                <h3>Banaue Rice Terraces</h3>
+                <img src="images/banaue.jpeg" alt="Banaue Rice Terraces" loading="lazy">
+                <p>The Banaue Rice Terraces are over 2,000 years old, a masterpiece of ancient Filipino engineering.
+                    These terraces have been carved into the mountains by indigenous Ifugao people and are a UNESCO
+                    World Heritage site.</p>
+                <h4>Why Visit?</h4>
+                <p>Visitors come to Banaue not only to see the terraces but to learn about the rich culture of the
+                    Ifugao people and their traditional farming methods.</p>
+                <a href="https://en.wikipedia.org/wiki/Banaue_Rice_Terraces" target="_blank">Learn More About Banaue
+                    Rice Terraces</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="current-year"></span> 🇵🇭 Glenn Soriano - Explore Philippines 🇵🇭</p>
+        <p>Last Modified: <span id="last-modified"></span></p>
+    
+        <nav class="sociallinks">
+            <a href="https://facebook.com" title="Facebook">
+                <img src="images/fb.png" alt="Facebook Logo">
+            </a>
+            <a href="https://twitter.com" title="Twitter">
+                <img src="images/twitter.jpg" alt="Twitter Logo">
+            </a>
+            <a href="https://instagram.com" title="Instagram">
+                <img src="images/instagram.jpg" alt="Instagram Logo">
+            </a>
+        </nav>
+    
+        <nav>
+            <ul>
+                <li><a href="privacy.html" aria-label="Privacy Policy">Privacy Policy</a></li>
+                <li><a href="terms.html" aria-label="Terms and Conditions">Terms & Conditions</a></li>
+            </ul>
+        </nav>
+    </footer>
+    
+    <script>
+        // Set dynamic year and last modified
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+        document.getElementById('last-modified').textContent = document.lastModified;
+    </script>
+    </body>
+    
+    </html>

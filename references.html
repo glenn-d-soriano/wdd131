@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="Explore Philippines is a website that highlights the best vacation spots in the Philippines, offering travel guides, cultural insights, and destination recommendations." />
+    <meta name="author" content="Glenn Soriano" />
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <title>References</title>
+    <link rel="stylesheet" href="styles/destinations.css" />
+</head>
+
+<body>
+    <header>
+        <h1>Best of the Philippines</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="destinations.html">Destinations</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>References</h2>
+            <ul>
+                <li><a href="https://en.wikipedia.org/wiki/Palawan">Wikipedia - Palawan</a></li>
+                <li><a href="https://en.wikipedia.org/wiki/Siargao">Wikipedia - Siargao</a></li>
+                <li><a href="https://en.wikipedia.org/wiki/Banaue_Rice_Terraces">Wikipedia - Banaue Rice Terraces</a>
+                </li>
+                <li>Images from Unsplash / Pexels / personal travel collection</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="current-year"></span> 🇵🇭 Glenn Soriano - Explore Philippines 🇵🇭</p>
+        <p>Last Modified: <span id="last-modified"></span></p>
+    </footer>
+
+    <script>
+        // Set dynamic year and last modified
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+        document.getElementById('last-modified').textContent = document.lastModified;
+    </script>
+
+</body>
+
+</html>
