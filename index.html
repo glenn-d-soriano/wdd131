@@ -47,23 +47,8 @@
         <!-- Featured Destinations -->
         <section class="featured">
             <h2>Featured Destinations</h2>
-            <div class="destination-cards">
-                <article class="destination-card">
-                    <img src="images/palawan.jpeg" alt="Palawan" loading="lazy">
-                    <h3>Palawan</h3>
-                    <p>Known for its limestone cliffs and crystal-clear lagoons, Palawan is a paradise on Earth.</p>
-                </article>
-                <article class="destination-card">
-                    <img src="images/siargao.jpeg" alt="Siargao" loading="lazy">
-                    <h3>Siargao</h3>
-                    <p>The surfing capital of the Philippines, perfect for adventure and beach lovers alike.</p>
-                </article>
-                <article class="destination-card">
-                    <img src="images/banaue.jpeg" alt="Banaue Rice Terraces" loading="lazy">
-                    <h3>Banaue</h3>
-                    <p>Marvel at the stunning 2,000-year-old rice terraces carved into the mountains by ancient
-                        Filipinos.</p>
-                </article>
+            <div class="destination-cards" id="destination-cards">
+                <!-- Destination cards will be inserted here by JavaScript -->
             </div>
         </section>
 
@@ -116,8 +101,10 @@
         
                 <label for="email">Email:</label>
                 <input type="email" id="email" name="email" required>
-        
+                <p>Number of Subscriptions: <span id="reviewCount">0</span></p>
+
                 <button type="submit">Subscribe</button>
+                
             </form>
         </section>
 

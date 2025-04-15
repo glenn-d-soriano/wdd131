@@ -20,6 +20,33 @@ const destinations = [
         description: "Marvel at the 2,000-year-old rice terraces carved into the mountains by ancient Filipinos."
     }
 ];
+function handleFormSubmit(event) {
+    event.preventDefault(); // Prevent form from submitting the traditional way
+
+    // Increment the review count stored in localStorage
+    let count = Number(localStorage.getItem("reviewCount")) || 0;
+    count++;
+    localStorage.setItem("reviewCount", count);
+
+    // Update the review count on the page
+    document.getElementById("reviewCount").textContent = count;
+
+    // Optionally, show a success message or reset the form
+    alert("Thank you for subscribing! Your subscription count is now: " + count);
+
+    // Reset the form
+    document.getElementById("newsletterForm").reset();
+}
+
+// Add event listener to the form to run the function when it's submitted
+document.getElementById("newsletterForm").addEventListener("submit", handleFormSubmit);
+
+// Set initial review count on page load
+document.addEventListener("DOMContentLoaded", function () {
+    const count = Number(localStorage.getItem("reviewCount")) || 0;
+    document.getElementById("reviewCount").textContent = count;
+});
+
 
 function loadDestinations() {
     const container = document.querySelector(".destination-cards");
