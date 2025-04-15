@@ -108,6 +108,17 @@ links.forEach(link => {
     }
 });
 
+const newsletterForm = document.getElementById("newsletterForm");
+if (newsletterForm) {
+    newsletterForm.addEventListener("submit", function (event) {
+        event.preventDefault(); // Stop the form from submitting
+        const name = document.getElementById("name").value;
+        const email = document.getElementById("email").value;
+        alert(`Thank you, ${name}! You've subscribed with ${email}.`);
+        this.reset(); // Clear the form
+    });
+}
+
 
 
 // Set year and last modified date

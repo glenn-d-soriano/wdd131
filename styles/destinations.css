@@ -221,7 +221,7 @@ footer p {
     border-radius: 5px;
     cursor: pointer;
     margin-top: 10px;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .favorite-btn:hover {
@@ -251,7 +251,7 @@ textarea {
 
 button {
     padding: 12px;
-    background-color: var(--primary-color);
+    background-color: #00796b;
     color: white;
     font-weight: bold;
     border: none;
@@ -260,7 +260,7 @@ button {
 }
 
 button:hover {
-    background-color: #00796b;
+    background-color: #004d40;
 }
 
 .map {
@@ -436,6 +436,3 @@ nav ul li a:hover {
     text-decoration: underline;
 }
 
-.favorite-btn {
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
