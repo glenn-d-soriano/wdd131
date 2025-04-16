@@ -16,6 +16,27 @@ body {
     padding: 0;
 }
 
+.intro-line {
+    color: #ffffff;
+    /* Example: a deeper teal with good contrast */
+    font-weight: bold;
+    /* Optional for extra emphasis */
+}
+/* Typography Consistency */
+h1,
+h2,
+h3 {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.2;
+}
+
+p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #000000;
+    font-family: 'Roboto', sans-serif;
+}
+
 /* Header Styles */
 header {
     background-color: var(--header-bg-color);
@@ -37,11 +58,10 @@ nav {
 nav ul {
     list-style: none;
     padding: 0;
-}
-
-nav ul li {
-    display: inline-block;
-    margin-right: 20px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
 nav ul li a {
@@ -49,6 +69,10 @@ nav ul li a {
     text-decoration: none;
     font-weight: bold;
     font-size: 1rem;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
 }
 
 /* Hero Section */
@@ -83,12 +107,13 @@ nav ul li a {
 
 .hero-text p {
     font-size: 1.25rem;
-    color: white;
 }
 
-/* Site Plan Sections */
+/* Section Layout */
 section {
-    margin-bottom: 20px;
+    padding: 40px 20px;
+    margin: 0 auto;
+    max-width: 1200px;
 }
 
 section h3 {
@@ -97,19 +122,12 @@ section h3 {
     margin-bottom: 10px;
 }
 
-section p {
-    font-size: 1rem;
-    line-height: 1.5;
-    color: #666;
-}
-
-/* Footer Styles */
+/* Footer */
 footer {
     background-color: var(--header-bg-color);
     color: #fff;
-    padding: 20px;
+    padding: 40px 20px;
     text-align: center;
-    width: 100%;
 }
 
 footer p {
@@ -117,101 +135,77 @@ footer p {
     margin: 5px 0;
 }
 
-/* Featured Destinations Section */
-.featured {
-    margin-top: 40px;
-}
-
-.featured h2 {
-    font-size: 2rem;
-    color: var(--primary-color);
+/* Featured + Specialized Section Headings */
+.featured h2,
+.specialized h2,
+.employee-profiles h2 {
     text-align: center;
+    font-size: 2.2rem;
+    color: var(--primary-color);
     margin-bottom: 20px;
 }
 
-.destination-cards {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 20px;
+/* Destination + Specialized Cards Container */
+.destination-cards,
+.specialized-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    padding: 0 10px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-.destination-card {
-    flex: 1;
-    min-width: 280px;
-    max-width: 350px;
-    background-color: #fff;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    overflow: hidden;
-    text-align: center;
+/* Individual Card Style */
+.destination-card,
+.specialized-card {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.destination-card img {
+.destination-card:hover,
+.specialized-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Card Images */
+.destination-card img,
+.specialized-card img {
     width: 100%;
-    height: auto;
-    display: block;
+    height: 200px;
     object-fit: cover;
-    max-height: 200px;
     border-radius: 8px;
-    transition: transform 0.3s ease-in-out;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.destination-card:hover img {
+.destination-card img:hover,
+.specialized-card img:hover {
     transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
-.destination-card h3 {
+/* Card Text */
+.destination-card h3,
+.specialized-card h3 {
     font-size: 1.5rem;
-    margin: 15px 0 10px;
     color: var(--primary-color);
+    margin-bottom: 10px;
 }
 
-.destination-card p {
+.destination-card p,
+.specialized-card p {
     font-size: 1rem;
-    color: #666;
+    color: #555;
     line-height: 1.5;
-    margin-bottom: 20px;
 }
 
-/* Combined Responsive Styles */
-@media (max-width: 768px) {
-    header h1 {
-        font-size: 2rem;
-    }
-
-    .hero-text h2 {
-        font-size: 2rem;
-    }
-
-    .hero-text p {
-        font-size: 1rem;
-    }
-
-    nav ul li {
-        margin-right: 15px;
-    }
-
-    .destination-cards {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .destination-card {
-        max-width: 100%;
-        margin-bottom: 20px;
-    }
-
-    .destination-card img {
-        max-height: 150px;
-    }
-
-    .featured h2 {
-        font-size: 1.5rem;
-    }
-}
-
+/* Favorite Button */
 .favorite-btn {
     background-color: var(--secondary-color);
     color: white;
@@ -233,12 +227,19 @@ footer p {
     color: black;
 }
 
-form {
+/* Contact Form & Map */
+form,
+.contact-details,
+.map {
     max-width: 600px;
-    margin: 0 auto;
+    margin: 0 auto 40px;
     display: flex;
     flex-direction: column;
     gap: 15px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
 }
 
 input,
@@ -263,11 +264,6 @@ button:hover {
     background-color: #004d40;
 }
 
-.map {
-    margin-top: 40px;
-    text-align: center;
-}
-
 iframe {
     width: 100%;
     height: 300px;
@@ -275,51 +271,26 @@ iframe {
     border-radius: 10px;
 }
 
-.contact-details {
-    text-align: center;
-    margin-top: 20px;
-}
-
-/* General Layout Styles */
+/* Destination Section Layout */
 .destination-section {
     margin-bottom: 40px;
 }
 
 .destination-section h3 {
     font-size: 2rem;
-    /* Adjust the size of the heading */
-    margin-bottom: 10px;
-    color: #009688;
-    /* Teal */
+    color: var(--primary-color);
 }
 
 .destination-section img {
     width: 100%;
-    /* Make sure the image fits within its container */
     max-width: 600px;
-    /* Set a maximum width to prevent oversized images */
     height: auto;
-    /* Maintain aspect ratio */
     display: block;
-    /* Remove any unwanted space under the image */
     margin: 0 auto;
-    /* Center the image */
+    border-radius: 10px;
 }
 
-/* Make the image size responsive */
-@media (max-width: 768px) {
-    .destination-section img {
-        width: 100%;
-        max-width: 100%;
-        /* Allow the image to fill smaller screen sizes */
-    }
-
-    .destination-section h3 {
-        font-size: 1.5rem;
-        /* Make headings slightly smaller on mobile */
-    }
-}
-
+/* Social Links */
 .sociallinks img {
     width: 24px;
     height: 24px;
@@ -327,77 +298,7 @@ iframe {
     vertical-align: middle;
 }
 
-/* Improve spacing between sections */
-.featured,
-.specialized {
-    padding: 40px 20px;
-    background-color: #ffffff;
-    margin-bottom: 0;
-    /* Make them close together */
-}
-
-/* Headings style */
-.featured h2,
-.specialized h2 {
-    text-align: center;
-    font-size: 2.2rem;
-    color: #009688;
-    margin-bottom: 20px;
-}
-
-/* Destination & specialized cards layout */
-.destination-cards,
-.specialized-cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
-    padding: 0 10px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-/* Card style */
-.destination-card,
-.specialized-card {
-    background-color: #f9f9f9;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.destination-card:hover,
-.specialized-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-}
-
-/* Images inside cards */
-.destination-card img,
-.specialized-card img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 8px;
-    margin-bottom: 15px;
-}
-
-/* Headings and text */
-.destination-card h3,
-.specialized-card h3 {
-    font-size: 1.5rem;
-    color: #009688;
-    margin-bottom: 10px;
-}
-
-.destination-card p,
-.specialized-card p {
-    font-size: 1rem;
-    color: #555;
-    line-height: 1.5;
-}
-
+/* Employee Profiles */
 .employee-profiles {
     display: flex;
     flex-wrap: wrap;
@@ -405,13 +306,6 @@ iframe {
     gap: 2rem;
     padding: 2rem 1rem;
     text-align: center;
-}
-
-.employee-profiles h2 {
-    width: 100%;
-    font-size: 2rem;
-    color: #009688;
-    margin-bottom: 1rem;
 }
 
 .profile {
@@ -424,6 +318,12 @@ iframe {
     border-radius: 10px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
     object-fit: cover;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
 }
 
 .profile figcaption {
@@ -432,18 +332,35 @@ iframe {
     color: #333;
 }
 
-nav ul li a:hover {
-    text-decoration: underline;
-}
+/* Responsive Layout Adjustments */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
 
-/* Hover effect for images */
-img {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
+    .hero-text h2 {
+        font-size: 2rem;
+    }
 
-img:hover {
-    transform: scale(1.1);
-    /* Slight zoom effect */
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
-    /* Subtle shadow effect */
+    .hero-text p {
+        font-size: 1rem;
+    }
+
+    .destination-cards,
+    .specialized-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .destination-section img {
+        max-width: 100%;
+    }
+
+    .destination-section h3 {
+        font-size: 1.5rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
 }
